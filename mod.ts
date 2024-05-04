@@ -38,7 +38,6 @@ async function downloadFont(URL: string, fontPath: string) {
     try {
         const web = await fetch(URL)
         const content = await web.text();
-        console.log("Downloading")
         await Deno.writeTextFile(fontPath,content);
        
     } catch(ex) {
@@ -65,7 +64,6 @@ async function manageFontDirectory(fonts: (keyof typeof Fonts)[]) {
 }
 
 export async function getFont(font: (keyof typeof Fonts)) {
-        console.log("font")
         cache_font([font]);
         await manageFontDirectory([font]); // Download/handle font before returning the path
         const fontPath = `./RemapperFonts\\${font}.rmmodel`;
