@@ -13,7 +13,9 @@ I encourage everyone who has their own font and/or would like to pitch in to the
 
 # Setup
 
-Starting off, please import FontPlus: ``import { getFont, initFonts } from  'https://raw.githubusercontent.com/UGEcko/FontPlus/main/mod.ts'`` (Be sure it is cached.)
+Starting off, please import FontPlus: ``import { getFont, initFonts } from  'https://raw.githubusercontent.com/UGEcko/FontPlus/main/mod.ts'``
+
+(Be sure it is cached.)
 
 Before fetching any fonts, be sure to call ``initFonts()`` in the beginning of the script. This is so when you retrieve fonts, the script will have full access to the RM Cache without any issues.
 
