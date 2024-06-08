@@ -43,8 +43,8 @@ getFont("tzur") == "./RemapperFonts/tzur.rmmodel"
 <hr>
 
 ### Currently supported fonts:
-* Swifter
-* Tzur
-* Lite
+* [Swifter](https://github.com/thelightdesigner/ScuffedWalls/blob/main/Images/Text/swifterfont.png)
+* [Tzur](https://github.com/thelightdesigner/ScuffedWalls/blob/main/Images/Text/TzurS11Font.png)
+* [Lite](https://github.com/thelightdesigner/ScuffedWalls/blob/main/Images/Text/litefont.png)
 
 As mentioned before, I encourage everyone who would like to pitch in to expand this font library to do so! Create a PR in the Font folder including the .rmmodel, or you can send me the file on discord: <b>ugecko<b>.
