@@ -7,7 +7,8 @@ import {cacheData, rand} from "https://deno.land/x/remapper@3.1.2/src/mod.ts";
 const Fonts = {
     lite: "https://raw.githubusercontent.com/UGEcko/FontPlus/main/Fonts/lite.rmmodel",
     swifter: "https://raw.githubusercontent.com/UGEcko/FontPlus/main/Fonts/swifter.rmmodel",
-    tzur: "https://raw.githubusercontent.com/UGEcko/FontPlus/main/Fonts/tzur.rmmodel"
+    tzur: "https://raw.githubusercontent.com/UGEcko/FontPlus/main/Fonts/tzur.rmmodel",
+    gameplay: "https://raw.githubusercontent.com/UGEcko/FontPlus/main/Fonts/v3/GameplayFont.rmmodel"
 };
 let cachedFonts: (keyof typeof Fonts)[] = [];
 
