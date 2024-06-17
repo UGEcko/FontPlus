@@ -51,4 +51,9 @@ await getFont("Tzur") == "./RemapperFonts/tzur.rmmodel"
 * [Lite](https://github.com/thelightdesigner/ScuffedWalls/blob/main/Images/Text/litefont.png)
 * Gameplay
 
+## Using online fonts
+If youd like to use an rmmodel font that isnt on the FontPlus repo, but its on github (preferably), you can do ``getFont(undefined, "rawGithublink")`` to download the font.
+
+<hr>
+
 As mentioned before, I encourage everyone who would like to pitch in to expand this font library to do so! Create a PR in the Font folder including the .rmmodel, or you can send me the file on discord: <b>ugecko<b>.
