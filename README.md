@@ -13,31 +13,34 @@ I encourage everyone who has their own font and/or would like to pitch in to the
 
 # Setup
 
-Starting off, please import FontPlus: ``import { getFont, initFonts } from  'https://raw.githubusercontent.com/UGEcko/FontPlus/main/mod.ts'``
+Starting off, please import FontPlus: ``import { getFont, init } from  'https://raw.githubusercontent.com/UGEcko/FontPlus/main/mod.ts'``
 
 (Be sure it is cached.)
 
-Before fetching any fonts, be sure to call ``initFonts()`` in the beginning of the script. This is so when you retrieve fonts, the script will have full access to the RM Cache without any issues.
+Before fetching any fonts, be sure to use ``initFonts(RMVersion)``, preferably in the beginning of your script. This is so when you fetch fonts, it will get the correct version for you.
 
 Lastly, to retrieve fonts, you can call ex: ``getFont("Swifter")`` to retrieve the swifter font!
 
 ## Usage Examples:
 
 ```ts
-const text = new Text(getFont("Swifter"));
-text.position = [0, 3, 30];
+initFonts("v3");
 
-new ModelScene(new Geometry("Cube", {
+const text = new Text(await getFont("Tzur"));
+text.position = [0,5,20]
+
+const textScene = new ModelScene(new Geometry("Cube", {
     shader: "Standard",
-    shaderKeywords: [],
-    color: [1, 1, 1]
-})).static(text.toObjects("This is the Swifter font!"));
+    shaderKeywords:[],
+    color:[1,1,1]
+}))
+textScene.static(text.toObjects("Remapper funny!"));
 ```
 
 Note: The ``getFont()`` function returns the file path of the font model relative to the map directory, like how you would traditionally load font models.
 
 ```ts 
-getFont("tzur") == "./RemapperFonts/tzur.rmmodel"
+await getFont("Tzur") == "./RemapperFonts/tzur.rmmodel"
 ```
 
 <hr>
@@ -46,5 +49,6 @@ getFont("tzur") == "./RemapperFonts/tzur.rmmodel"
 * [Swifter](https://github.com/thelightdesigner/ScuffedWalls/blob/main/Images/Text/swifterfont.png)
 * [Tzur](https://github.com/thelightdesigner/ScuffedWalls/blob/main/Images/Text/TzurS11Font.png)
 * [Lite](https://github.com/thelightdesigner/ScuffedWalls/blob/main/Images/Text/litefont.png)
+* Gameplay
 
 As mentioned before, I encourage everyone who would like to pitch in to expand this font library to do so! Create a PR in the Font folder including the .rmmodel, or you can send me the file on discord: <b>ugecko<b>.
